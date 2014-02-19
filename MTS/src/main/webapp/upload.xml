@@ -1,0 +1,13 @@
+ <tracking deviceid="98989898989" date="28-Jan-2014" time="16:56:12">
+<locations><location><latitude>17.43463786</latitude><longitude>78.39884876</longitude><datetime>28-Jan-2014 16:55:17</datetime></location>
+<location><latitude>17.4346477</latitude><longitude>78.39885371</longitude><datetime>29-Jan-2014 16:55:41</datetime></location>
+</locations>
+<calls>
+<call><number>+919030175850</number><duration>01:00</duration><type>1</type><datetime>29-Jan-2014 16:55:17</datetime></call>
+<call><number>+919030175850</number><duration>12:00</duration><type>2</type><datetime>29-Jan-2014 16:55:17</datetime></call>
+</calls>
+<messages>
+<message><number>+919030175850</number><type>1</type><datetime>29-Jan-2014 16:55:41</datetime>
+</message>
+</messages>
+</tracking>

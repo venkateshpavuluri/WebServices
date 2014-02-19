@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+<class name="com.mnt.mobiletrack.bean.Employee" table="Employee">
+<id name="employeeId" column="Employee_Id">
+<generator class="increment"></generator>
+</id>
+
+<property name="employeeGroupId" column="EmployeeGroup_Id"></property>
+<property name="fName" column="FName"></property>
+<property name="lName" column="LName"></property>
+<property name="mName" column="MName"></property>
+<property name="gender" column="Gender"></property>
+<property name="dob" column="DOB"></property>
+<property name="doj" column="DOJ"></property>
+<property name="pAdd" column="PAdd"></property>
+<property name="pCity" column="PCity"></property>
+<property name="pState" column="PState"></property>
+<property name="pCountry" column="PCountry"></property>
+<property name="tAdd" column="TAdd"></property>
+<property name="tCity" column="TCity"></property>
+<property name="tState" column="TState"></property>
+<property name="tCountry" column="TCountry"></property>
+<property name="eMail" column="EMail"></property>
+<property name="signature" column="Signature"></property>
+
+<property name="status" column="Status"></property>
+<bag name="employeeImieDetails" cascade="all" lazy="false">
+			<key column="Employee_Id" not-null="true"></key>
+			<one-to-many class="com.mnt.mobiletrack.bean.EmployeeIMIE" />
+		</bag>
+</class>
+<sql-query name="getdataf" callable="true" >
+   <return-scalar column="Employee_Id" />
+   <return-scalar column="FName" type="string"/>
+   <return-scalar column="IMIENumber" type="string"/>
+   <return-scalar column="DT" type="string"/>
+    <return-scalar column="Mobile" type="string"/>
+      {call getdata(:mobile)}
+    </sql-query>
+    <sql-query name="getAllMaps" callable="true" >
+   <return-scalar column="Employee_Id" />
+   <return-scalar column="FName" type="string"/>
+   <return-scalar column="IMIENumber" type="string"/>
+   <return-scalar column="DT" type="string"/>
+     <return-scalar column="Mobile" type="string"/>
+      {call getAllMapValues()}
+    </sql-query>
+    
+    
+    
+</hibernate-mapping>

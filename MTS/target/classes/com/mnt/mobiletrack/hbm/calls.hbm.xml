@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+
+<class name="com.mnt.mobiletrack.bean.Calls" table="Calls">
+<id name="callId" column="Call_Id">
+<generator class="increment"></generator>
+</id>
+<property name="imieNumbe" column="IMIE_Number"></property>
+<property name="callNumber" column="CallNumber"></property>
+<property name="duration" column="Duration"></property>
+<property name="callType" column="CallType"></property>
+<property name="dt" column="DT"></property>
+</class>
+</hibernate-mapping>
