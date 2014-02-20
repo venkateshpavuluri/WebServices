@@ -22,7 +22,4 @@ public class Calls {
 	public void setCalls(List<Call> calls) {
 		this.calls = calls;
 	}
-
-	
-
 }

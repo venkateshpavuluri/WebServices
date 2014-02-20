@@ -29,9 +29,8 @@ static{
 		try
 		{
 			
-	 connection=DriverManager.getConnection("jdbc:sqlserver://204.93.178.157;databaseName=badari_MobileTracking","badari_sa", "mntmob1");
-		//connection=DriverManager.getConnection("jdbc:sqlserver://204.93.178.157;databaseName=mydasecc_MobileTracking","mydasecc_sa", "mntmob1");
-		//connection=DriverManager.getConnection("jdbc:sqlserver://192.168.1.103:1433;databaseName=MobileTracking","mnterpuser", "mnterpuser");
+	 connection=DriverManager.getConnection("");
+		
 			}
 		
 		catch(Exception e)
